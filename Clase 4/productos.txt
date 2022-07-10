@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Producto 1",
+    "price": 75.3,
+    "thumbail": "obj.thumbail"
+  },
+  {
+    "id": 3,
+    "title": "Producto 2",
+    "price": 78.3,
+    "thumbail": "obj.thumbail2"
+  },
+  {
+    "id": 4,
+    "title": "Producto 1",
+    "price": 15.3,
+    "thumbail": "obj.thumbail"
+  },
+  {
+    "id": 5,
+    "title": "Producto 2",
+    "price": 78.3,
+    "thumbail": "obj.thumbail2"
+  },
+  {
+    "id": 6,
+    "title": "Producto 2",
+    "price": 3.3,
+    "thumbail": "obj.thumbail3"
+  },
+  {
+    "id": 7,
+    "title": "Producto 1",
+    "price": 15.3,
+    "thumbail": "obj.thumbail"
+  },
+  {
+    "id": 8,
+    "title": "Producto 2",
+    "price": 78.3,
+    "thumbail": "obj.thumbail2"
+  },
+  {
+    "id": 9,
+    "title": "Producto 2",
+    "price": 3.3,
+    "thumbail": "obj.thumbail3"
+  },
+  {
+    "id": 10,
+    "title": "Producto 1",
+    "price": 15.3,
+    "thumbail": "obj.thumbail"
+  },
+  {
+    "id": 11,
+    "title": "Producto 2",
+    "price": 78.3,
+    "thumbail": "obj.thumbail2"
+  },
+  {
+    "id": 12,
+    "title": "Producto 2",
+    "price": 3.3,
+    "thumbail": "obj.thumbail3"
+  }
+]
