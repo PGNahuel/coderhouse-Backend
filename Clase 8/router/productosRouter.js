@@ -18,7 +18,11 @@ router.get('/productos/:id',(req,res)=>{
 
     const params = req.params;
     const prod = productoController.getByID(params.id);
-    res.status(200).json(prod);
+
+    if(prod.length)
+        res.status(200).json(prod);
+    else   
+        res.status(200).json({error:'producto no encontrado'});
 
     console.log('Finaliza la obtención de un producto - ' + (new Date().toLocaleString()));
 });

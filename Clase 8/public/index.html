@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #botonera{margin-top:15px;}
+            label{font-weight: bolder;display:block;margin-top:5px;}
+            .campos input{
+                width:250px;
+                border-radius: 4px;
+                padding:5px;
+                border:1px solid lightgray
+            }
+            #botonera input{
+                border:0px solid gray;
+                padding:15px;
+                cursor:pointer;
+                margin:0px 5px;
+            }
+            #botonera [type="reset"]{background-color:rgb(229, 44, 44);color:white;border-radius:5px;}
+            #botonera [type="submit"]{background-color:rgb(7, 198, 0);color:white;border-radius:5px;}
+            #botonera [type="submit"][disabled=true]{background-color:rgb(111, 114, 111);color:white;border-radius:5px;}
+        </style>
+    </head>
+    <body>
+        <h1>Agregar un producto</h1>
+        <form action="/api/productos" method="post" autocomplete="false"> 
+            <div class="campos">
+                <label for="title">Producto:</label><input id="title" name="title" type="text"/>
+                <label for="price">Precio:</label><input id="price" name="price" type="number"/>
+                <label for="Thumbnail">Previsualización:</label><input id="thumbnail" name="thumbnail" type="text"/>
+            </div>
+            <div id="botonera">
+                <input type="reset" value="Limpiar" />
+                <input type="submit" value="Guardar Producto" id="btnGuardar" disabled="true"/> 
+            </div>
+        </form>
+
+        <script>
+            function habilitarBtnSubmit() {
+                if(document.getElementById("title").value.trim() != ''
+                    && document.getElementById("price").value > 0
+                    && document.getElementById("thumbnail").value.trim() != ''
+                ){
+                    document.getElementById("btnGuardar").removeAttribute("disabled");
+                }else{
+                    document.getElementById("btnGuardar").setAttribute("disabled","true");
+                }
+            }
+
+            document.getElementById("title").addEventListener('change',(evento)=>{ habilitarBtnSubmit(); });
+            document.getElementById("price").addEventListener('change',(evento)=>{ habilitarBtnSubmit(); });
+            document.getElementById("thumbnail").addEventListener('change',(evento)=>{ habilitarBtnSubmit(); });
+        </script>
+    </body>
+</html>
