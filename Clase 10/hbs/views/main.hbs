@@ -1,0 +1,22 @@
+<h1>Nuevo Producto</h1>
+
+<form action="/productos" method="post">
+    <label class="form-label" for="nombre">Producto</label>
+    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Producto">
+
+    <label class="form-label" for="precio">Precio</label>
+    <input class="form-control" type="number" id="precio" name="precio" placeholder="Precio">
+
+    <label class="form-label" for="thumbnail">Thumbnail</label>
+    <input class="form-control" type="text" id="thumbnail" name="thumbnail" placeholder="Link a Imagen de Referencia">
+
+    <hr class="my-4">
+        
+    <button class="btn btn-danger" type="reset">Limpiar</button>
+    <button class="btn btn-success" type="submit">Guardar Producto</button>
+</form>
+
+<hr class="my-4">
+
+<a class="btn btn-primary" href="/productos">Ver Todos los Productos</a>
+
