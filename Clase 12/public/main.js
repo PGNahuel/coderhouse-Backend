@@ -25,3 +25,31 @@ function agregarProducto(producto){
 }
 
 console.log('Cliente escuchando');
+
+
+socket.on('reciveMessages', function (data) { 
+    const html = data.map((elem, index) => {
+        return (`<li>
+                <strong class="autor"> ${elem.author}</strong>
+                [<span class="fyh">${elem.time}</span>]:
+                <span class="msg"> ${elem.text}</span> 
+            </li>`)
+        }).join(" ");
+
+        document.getElementById('resultMsg').innerHTML = `<ul>${html}</ul>`;
+        document.getElementById("resultMsg").scrollTop += 100;
+});
+
+function addMessage(e) {
+    const mensaje = {
+        author: document.getElementById('txtEmail').value,
+        text: document.getElementById('txtMsg').value
+    };
+
+    document.getElementById('txtMsg').value = '';
+    document.getElementById("txtMsg").focus();
+
+    socket.emit('new-message', mensaje);
+    
+    return false;
+}

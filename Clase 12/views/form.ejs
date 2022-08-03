@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="/css/style.css" rel="stylesheet">
         <title>Document</title>
     </head>
     <body>
@@ -15,11 +16,11 @@
                 <form action="/productos" method="post" onsubmit="return agregarProducto(this)">
                     <div class="form-group">
                         <label for="nombre">Producto</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Producto">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Producto" required>
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio">
+                        <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio" required>
                     </div>
                     <div class="form-group">
                         <label for="thumbnail">Thumbnail</label>
@@ -32,7 +33,27 @@
             <hr>
             <!--<a href="/productos" class="btn btn-primary">Ver Lista de Productos</a>-->
             <div id="divProductos">
-            <%- include('partials/datos.ejs'); %>
+                <%- include('partials/datos.ejs'); %>
+            </div>
+
+            <div id="chat">
+                <h2>Centro de Mensajes</h2>
+
+                <form action="/msgNuevo" metod="post" onsubmit="return addMessage(this)">
+                    <div class="form-group">
+                        <label for="txtEmail">Correo Electrónico:</label>
+                        <input type="email" name="txtEmail" id="txtEmail" class="form-control" placeholder="Ingrese su Correo Electrónico" required/>
+                    </div>
+
+                    <p id="resultMsg">
+                        <!--<small style="color:rgb(151, 147, 147);font-style: italic;background-color:aquamarine;padding:5px 10px;border-radius: 5px;"><b>SISTEMA: </b>Bienvenido, por favor introduzca un correo electronico para poder envíar mensajes.</small>-->
+                    </p>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Escribe un mensaje aquí" id="txtMsg" required>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                </form>
             </div>
         </div>
 

@@ -1,0 +1,32 @@
+.autor{
+    color:blue;
+    font-weight: bolder;
+}
+.fyh{
+    color:brown;
+}
+.msg{
+    font-style: italic;
+    color:green;
+}
+
+#resultMsg ul{
+    margin:0px;
+    padding:0px;
+}
+#resultMsg ul li{
+    list-style: none;
+    padding:0px 7px;
+    margin:2px 0px;
+}
+
+#resultMsg ul li:hover{
+    background-color:bisque;
+}
+
+#resultMsg{
+    margin:10px 0px;border:1px solid lightgrey;
+    padding:0px;
+    max-height: 250px;
+    overflow:auto;
+}
