@@ -1,0 +1,31 @@
+
+<table class="table table-hover table-borded" id="tblDatos">
+    <thead>
+        <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Thumbnail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- if no datos -->
+        <% if (datos.length===0) { %>
+            <tr>
+                <td colspan="3">
+                    No hay productos para mostrar
+                </td>
+            </tr>
+            <% }else{ %>
+
+                <% for (let i=0; i < datos.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%=datos[i].nombre%>
+                        </td>
+                        <td>$<%=datos[i].precio%>
+                        </td>
+                        <td><img src="<%=datos[i].thumbnail%>" alt="imagen"></td>
+                    </tr>
+                    <% } } %>
+    </tbody>
+</table>
