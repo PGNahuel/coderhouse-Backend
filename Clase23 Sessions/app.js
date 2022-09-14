@@ -28,7 +28,7 @@ app.set('views','./views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static('public'));
 
 // Routers
 app.get("/",(req,res)=>{

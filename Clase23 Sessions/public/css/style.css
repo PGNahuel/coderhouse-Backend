@@ -1,0 +1,31 @@
+.container{
+    width:80%;
+    margin:auto;
+    border:1px solid lightgray;
+    padding:10px;
+}
+
+label{
+    font-weight: bolder;
+    display:block;
+}
+
+input[type="text"]{
+    padding:5px;
+    margin:10px 0px;
+    width:350px;
+}
+
+input[type="submit"]{
+    display:block;
+    padding:10px;
+    border-radius: 10px;
+    border:0px;
+    background-color:greenyellow;
+}
+
+h1{
+    background-color:cyan;
+    margin:2px;
+    padding:10px;
+}
